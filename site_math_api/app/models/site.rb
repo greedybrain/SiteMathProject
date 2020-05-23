@@ -2,7 +2,7 @@ require "nokogiri"
 require "open-uri"
 
 class Site < ApplicationRecord
-     validates :url_link, presence :true
+     # validate :url_link, presence :true
 
      def self.get_url_data(link)
 
