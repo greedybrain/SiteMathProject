@@ -1,0 +1,5 @@
+class SiteAdapter {
+     constructor() {
+          
+     }
+}
