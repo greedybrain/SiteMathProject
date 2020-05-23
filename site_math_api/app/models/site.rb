@@ -4,7 +4,7 @@ require "open-uri"
 class Site < ApplicationRecord
      validates :url_link, presence :true
 
-     def get_url_data(link)
+     def self.get_url_data(link)
 
           url = "https://www.worthofweb.com/website-value/#{link}/"
           
