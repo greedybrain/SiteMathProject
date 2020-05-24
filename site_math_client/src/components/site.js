@@ -17,13 +17,13 @@ class Site {
           this.siteDataCont = document.querySelector("div.site-data-cont")
           this.container = document.querySelector("div.container")
           this.dots = document.querySelectorAll('.dot')
+          this.siteCards = document.querySelectorAll("div.site-card")
      }
 
      static sitesArr = []
 
      handleFormSubmit() {
           const form = document.querySelector("input[name=url_link]").parentElement.parentElement
-          
           
           // detect input 
           this.handleKeyUp()
@@ -34,18 +34,27 @@ class Site {
 
                SiteAdapter.getUrlData()
                     .then(site => {
-                         // clear site data container
-                         this.siteDataCont.querySelectorAll('*').forEach(ele => {
-                              ele.remove()
-                         })
+                          // clear site data container
+                          const cards = this.siteDataCont.querySelectorAll("div.site-card")
+                          Array.from(cards).forEach(card => {
+                               this.handleSiteCardRemoveAnimation(card)
+                          })
                          // push site data into array
                          Site.sitesArr.push(site)
                          const newSite = new Site()
-                         newSite.buildDomElementsForSiteData(site)
-                         this.siteDataCont.style.backgroundImage = "none"
-                         form.parentElement.style.height = "25vh"
-                         form.parentElement.style.transition = "height .2s linear"
+                         setTimeout(() => {
+                              newSite.buildDomElementsForSiteData(site)
+                              form.parentElement.style.height = "20vh"
+                              this.siteDataCont.style.backgroundImage = "none"
+                              // debugger
+                              this.siteDataCont.firstElementChild.classList.add(
+                                   "animate__animated",
+                                   "animate__backInUp",
+                                   "animate__fast",
+                              )
+                         }, 1000);
                          localStorage.setItem("sites", JSON.stringify(Site.sitesArr))
+                        
                     })
                form.reset()
           })
@@ -95,6 +104,17 @@ class Site {
                     )
                })
           })
+     }
+
+     handleSiteCardRemoveAnimation(siteCard) {
+          siteCard.classList.add(
+                "animate__animated",
+                "animate__bounceOutDown",
+                "animate__fast"
+          )
+          setTimeout(() => {
+               siteCard.remove()
+          }, 500);
      }
 
      buildDomElementsForSiteData(site) {

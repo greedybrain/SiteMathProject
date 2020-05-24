@@ -18,15 +18,15 @@ class Site < ApplicationRecord
                raise invalid_message
           end
           
-          dollar_amts = []
+          data_field = []
           assoc = {}
           doc.css("div.side-left p").each do |data|
-               dollar_amts << data.text
+               data_field << data.text
           end
           
           
           i = 0 
-          info = dollar_amts[0..-5]
+          info = data_field[0..-5]
           while i < info.count
                assoc[info[i]] = info[i + 1]
                i += 2
