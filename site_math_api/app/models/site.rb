@@ -23,7 +23,8 @@ class Site < ApplicationRecord
           doc.css("div.side-left p").each do |data|
                dollar_amts << data.text
           end
-
+          
+          
           i = 0 
           info = dollar_amts[0..-5]
           while i < info.count
