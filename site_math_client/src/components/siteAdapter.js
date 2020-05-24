@@ -1,12 +1,13 @@
 class SiteAdapter {
      constructor() {
           this.baseUrl = "http://localhost:3000/"
+          this.searchInput = document.querySelector("input[name=url_link]")
      }
 
-     static getUrl(e) {
+     static getUrlData(e) {
           const adapter = new this
           const data = {
-               url: e.target.value
+               url_link: new this().searchInput.value 
           }
           const options = {
                method: "POST",
