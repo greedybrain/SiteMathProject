@@ -8,7 +8,7 @@ class SitesController < ApplicationController
      def site_data
           result = Site.get_url_data(params[:url_link])
           
-          site_data = Site.create(
+          site_data = Site.find_or_create_by(
                url_link: params[:url_link],
                overall_site_worth: result["Estimated worth of this website:"],
                rev_per_day: result["Estimated revenue per day:"],

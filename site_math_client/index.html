@@ -4,13 +4,46 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Site Math</title>
+     <link rel="stylesheet" href="./src/public/index.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 </head>
 <body>
+     <header>
+          <div class="logo">
+               <img src="./src/public/images/site-logo.png" alt="Site Logo">
+               <span>"Do the math... the site math"</span>
+          </div>
+          <div class="favs">
+               <img src="./src/public/images/no-favs.png" alt="Favorites Empty">
+          </div>
+     </header>
      <div class="container">
-          <form id="search-form">
-               <input type="search" name="url_link" class="search" placeholder="Add domain ext. if not .com">
-          </form>
+          <div class="form-cont">
+               <form id="search-form">
+                    <h2>WWW
+                         <span class="dot dot1">.</span>
+                         <span class="dot dot2">.</span>
+                         <span class="dot dot3">.</span>
+                    </h2>
+                    <div class="search-cont">
+                         <input type="search" name="url_link" class="search" placeholder="E.g Google.com/ Repl.it/ JSfiddle.net/ Etc">
+                    </div>
+
+               </form>
+          </div>
+          <div class="site-data-cont">
+
+          </div>
      </div>
+
+     <footer>
+          <div class="copyright">
+               <p>©2020 SiteMath</p>
+          </div>
+          <div class="disclaimer">
+               <p>Disclaimer: All data is calculated by using estimates from a third party site</p>
+          </div>
+     </footer>
 
      <script src="./src/components/siteAdapter.js"></script>
      <script src="./src//components/site.js"></script>
