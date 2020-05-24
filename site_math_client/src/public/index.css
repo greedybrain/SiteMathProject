@@ -119,7 +119,6 @@ header .favs img {
   background-size: contain;
   background-position: center;
   text-align: center;
-  overflow-x: hidden;
 }
 
 .container div.site-data-cont .site-card:not(:last-child) {
