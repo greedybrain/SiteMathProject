@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: 'Baloo 2', cursive;
+}
+
+header {
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 50px;
+}
+
+header .logo {
+  width: 225px;
+}
+
+header .favs {
+  width: 40px;
+  cursor: pointer;
+}
+
+header .favs img {
+  width: 100%;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 77vh;
+  padding: 0 50px;
+}
+
+.container .form-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.container .form-cont form {
+  margin-bottom: 100px;
+  width: 450px;
+}
+
+.container .form-cont form h2 span {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.container .form-cont form h2 span.dot3 {
+  --animate-repeat: 1000
+                         ;
+}
+
+.container .form-cont form h2 span.dot2 {
+  --animate-repeat: 1000
+                         ;
+}
+
+.container .form-cont form h2 span.dot1 {
+  --animate-repeat: 1000
+                         ;
+}
+
+.container .form-cont form .search-cont {
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  height: 50px;
+}
+
+.container .form-cont form .search-cont input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0 5px;
+  font-size: 1rem;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.container div.site-data-cont {
+  background-image: url("./images/placeholder-img.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container div.site-data-cont .site-card:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.container div.site-data-cont .site-card .site-name {
+  margin-bottom: 30px;
+  letter-spacing: 5px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.container div.site-data-cont .site-card ul li {
+  font-size: 1.5rem;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.container div.site-data-cont .site-card ul li:not(:first-child) {
+  margin-top: 15px;
+}
+
+.container div.site-data-cont .site-card ul li span.dollar-sign {
+  display: inline-block;
+  padding: 10px 10px;
+  border-radius: 100px;
+  margin-right: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+footer {
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 50px;
+  letter-spacing: 1px;
+  color: #808080;
+}
+/*# sourceMappingURL=index.css.map */

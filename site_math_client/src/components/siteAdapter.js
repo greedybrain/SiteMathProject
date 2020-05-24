@@ -4,10 +4,10 @@ class SiteAdapter {
           this.searchInput = document.querySelector("input[name=url_link]")
      }
 
-     static getUrlData(e) {
-          const adapter = new this
+     static getUrlData() {
+          const adapter = new SiteAdapter()
           const data = {
-               url_link: new this().searchInput.value 
+               url_link: adapter.searchInput.value
           }
           const options = {
                method: "POST",
@@ -18,6 +18,6 @@ class SiteAdapter {
                body: JSON.stringify(data)
           }
           return fetch(adapter.baseUrl + 'url_data', options)
-               .then(res => res.json())
+          .then(res => res.json())
      }
 }

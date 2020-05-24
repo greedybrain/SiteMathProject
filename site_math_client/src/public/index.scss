@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+li {
+     list-style: none;
+}
+
+img {
+     width: 100%;
+}
+
+body {
+     font-family: 'Baloo 2', cursive;
+}
+
+header {
+     height: 15vh;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 50px;
+
+     .logo {
+          width: 225px;
+     }
+
+     .favs {
+          width: 40px;
+          cursor: pointer;
+
+          img {
+               width: 100%;
+          }
+     }
+}
+
+.container {
+     display: flex;
+     flex-direction: column;
+     height: 77vh;
+     padding: 0 50px;
+
+     .form-cont {
+          display: flex;
+          align-items: center;
+          // align-items: flex-start;
+          justify-content: center;
+          height: 100%;
+          // height: 30vh;
+
+          form {
+               margin-bottom: 100px;
+               width: 450px;
+
+               h2 {
+
+                    span {
+                         display: inline-block;
+                         font-size: 2rem;
+
+                         &.dot3 {
+                              --animate-repeat: 1000
+                         }
+                         &.dot2 {
+                              --animate-repeat: 1000
+                         }
+                         &.dot1 {
+                              --animate-repeat: 1000
+                         }
+                    }
+               }
+
+               .search-cont {
+                    border: 1px solid #c6c6c6;
+                    border-radius: 5px;
+                    height: 50px;
+
+                    input {
+                         width: 100%;
+                         height: 100%;
+                         border: 0;
+                         border-radius: 4px;
+                         text-align: center;
+                         padding: 0 5px;
+                         font-size: 1rem;
+                         outline: none;
+                         letter-spacing: 1px;
+                    }
+               }
+          }
+     }
+
+     div.site-data-cont {
+          background-image: url("./images/placeholder-img.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          text-align: center;
+          overflow-x: hidden;
+
+          .site-card {
+
+               &:not(:last-child) {
+                    margin-bottom: 50px;
+               }
+
+               .site-name {
+                    margin-bottom: 30px;
+                    letter-spacing: 5px;
+                    padding: 5px;
+                    border-radius: 20px;
+                    background-color: #333;
+                    color: #fff;
+               }
+     
+               ul {
+                    li {
+                         font-size: 1.5rem;
+                         text-align: left;
+                         letter-spacing: 2px;
+     
+                         &:not(:first-child) {
+                              margin-top: 15px;
+                         }
+     
+                         span.dollar-sign {
+                              display: inline-block;
+                              padding: 10px 10px;
+                              border-radius: 100px;
+                              margin-right: 10px;
+                              background-color: #333;
+                              color: #fff;
+                              text-align: center;
+                         }
+                    }
+               }
+          }
+
+     }
+}
+
+footer {
+     height: 8vh;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 50px;
+     letter-spacing: 1px;
+     color: #808080;
+}
