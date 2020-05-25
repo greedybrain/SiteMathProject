@@ -1,4 +1,5 @@
+const action = new Site()
+Site.handleInitRender()
 document.addEventListener("DOMContentLoaded", () => {
-     const field = new Site()
-     field.handleFormSubmit()
+     action.handleFormSubmit()
 })
