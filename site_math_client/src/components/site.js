@@ -43,7 +43,7 @@ class Site {
                          const newSite = new Site()
                          setTimeout(() => {
                               newSite.buildDomElementsForSiteData(site)
-                              form.parentElement.style.height = "20vh"
+                              form.parentElement.style.height = "15vh"
                               this.siteDataCont.style.backgroundImage = "none"
                          
                               this.siteDataCont.firstElementChild.classList.add(
@@ -114,9 +114,9 @@ class Site {
           }, 500);
      }
 
-     handleSaveBtnClick() {
-          //
-     }
+     // handleSaveBtnClick() {
+     //      //
+     // }
 
      buildDomElementsForSiteData(site) {
           const newSite = new Site(
@@ -150,9 +150,9 @@ class Site {
           siteAlexaRank.textContent = `Alexa Rank #${newSite.alexaRank}`
           siteAlexaRank.title = "Alexa Rank"
           siteHeading.classList.add("site-name")
-          const saveBtn = document.createElement("button")
-          saveBtn.classList.add("save-btn")
-          saveBtn.textContent = `Save ${newSite.siteName} Data`
+          // const saveBtn = document.createElement("button")
+          // saveBtn.classList.add("save-btn")
+          // saveBtn.textContent = `Save ${newSite.siteName} Data`
 
           if (newSite.siteName !== undefined) {
                if (newSite.siteName.includes('.')) {
@@ -276,14 +276,7 @@ class Site {
                )
                siteVisitsList.appendChild(dataVisitsYearlyLi)
           }, 1700);
-          setTimeout(() => {
-               saveBtn.classList.add(
-                    "animate__animated",
-                    "animate__zoomIn",
-                    "animate__fast"
-               )
-               siteCard.append(saveBtn)
-          }, 1600);
+          // setTimeout(ds
           
           this.siteDataCont.prepend(siteCard)
      }
