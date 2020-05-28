@@ -74,7 +74,6 @@ class Site {
                          form.reset()
                     })
           })
-          // this.handleSaveBtnClick()
 
      }
 
@@ -135,11 +134,7 @@ class Site {
      }
 
      handleSaveBtnClick() {
-          // const siteCard = document.querySelector(".site-card")
-          // const allEntries = localStorage.getItem("visitorSaves")
-          // allEntries.push(siteCard)
-          // localStorage.setItem("visitorSaves", allEntries)
-          // alert("Site data saved!")
+          //
      }
 
      buildDomElementsForSiteData(site) {
