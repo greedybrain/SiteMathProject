@@ -27,7 +27,8 @@ class Site {
           const favAmt = document.querySelector("span.fav-amt")
           const yesFavs = document.querySelector(".yes-favs")
           const noFavs = document.querySelector(".no-favs")
-          if (localStorage.visitorSaves) {
+          const saves = localStorage.setItem("visitorSaves", Site.visitorSaves)
+          if (saves) {
                if (JSON.parse(localStorage.visitorSaves).length > 0) {
                     yesFavs.style.display = "block"
                     noFavs.style.display = "none"
@@ -136,7 +137,6 @@ class Site {
 
      handleSaveBtnClick() {
           const siteCard = document.querySelector(".site-card")
-          alert(siteCard)
           const allEntries = localStorage.getItem("visitorSaves")
           allEntries.push(siteCard)
           localStorage.setItem("visitorSaves", allEntries)
