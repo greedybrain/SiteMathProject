@@ -18,7 +18,7 @@ class Site {
           this.container = document.querySelector("div.container")
           this.dots = document.querySelectorAll('.dot')
           this.siteCards = document.querySelectorAll("div.site-card")
-          
+
      }
 
      static visitorSaves = []
@@ -27,8 +27,7 @@ class Site {
           const favAmt = document.querySelector("span.fav-amt")
           const yesFavs = document.querySelector(".yes-favs")
           const noFavs = document.querySelector(".no-favs")
-          const saves = localStorage.setItem("visitorSaves", Site.visitorSaves)
-          if (saves) {
+          if (localStorage.visitorSaves) {
                if (JSON.parse(localStorage.visitorSaves).length > 0) {
                     yesFavs.style.display = "block"
                     noFavs.style.display = "none"
