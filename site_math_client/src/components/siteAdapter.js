@@ -1,7 +1,7 @@
 class SiteAdapter {
      constructor() {
           // this.baseUrl = "http://localhost:3000/"
-          this.baseUrl = "https://site-math.herokuapp.com/"
+          this.baseUrl = "https://site-math.herokuapp.com/url_data"
           this.searchInput = document.querySelector("input[name=url_link]")
      }
 
@@ -18,7 +18,7 @@ class SiteAdapter {
                },
                body: JSON.stringify(data)
           }
-          return fetch(adapter.baseUrl + 'url_data', options)
+          return fetch(adapter.baseUrl, options)
           .then(res => res.json())
      }
 }
