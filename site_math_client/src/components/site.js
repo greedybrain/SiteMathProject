@@ -72,9 +72,9 @@ class Site {
                               )
                          }, 1000);
                          form.reset()
-                         this.handleSaveBtnClick(site)
                     })
           })
+          this.handleSaveBtnClick()
 
      }
 
@@ -134,8 +134,12 @@ class Site {
           }, 500);
      }
 
-     handleSaveBtnClick(site) {
-          //
+     handleSaveBtnClick() {
+          const siteCard = document.querySelector(".site-card")
+          const allEntries = localStorage.getItem("visitorSaves")
+          allEntries.push(siteCard)
+          localStorage.setItem("visitorSaves", allEntries)
+          alert("Site data saved!")
      }
 
      buildDomElementsForSiteData(site) {
