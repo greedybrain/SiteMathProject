@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://greedybrain.github.io/SiteMathProject/site_math_client/'
+    origins '*'
 
     resource '*',
       headers: :any,

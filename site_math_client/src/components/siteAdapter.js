@@ -1,7 +1,7 @@
 class SiteAdapter {
      constructor() {
           // this.baseUrl = "http://localhost:3000/"
-          this.baseUrl = "https://site-math.herokuapp.com/url_data"
+          this.baseUrl = "http://site-math.herokuapp.com/url_data"
           this.searchInput = document.querySelector("input[name=url_link]")
      }
 
