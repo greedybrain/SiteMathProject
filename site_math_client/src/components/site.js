@@ -136,6 +136,7 @@ class Site {
 
      handleSaveBtnClick() {
           const siteCard = document.querySelector(".site-card")
+          alert(siteCard)
           const allEntries = localStorage.getItem("visitorSaves")
           allEntries.push(siteCard)
           localStorage.setItem("visitorSaves", allEntries)
