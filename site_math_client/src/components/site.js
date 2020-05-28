@@ -18,7 +18,7 @@ class Site {
           this.container = document.querySelector("div.container")
           this.dots = document.querySelectorAll('.dot')
           this.siteCards = document.querySelectorAll("div.site-card")
-
+          
      }
 
      static visitorSaves = []
@@ -75,7 +75,7 @@ class Site {
                          form.reset()
                     })
           })
-          this.handleSaveBtnClick()
+          // this.handleSaveBtnClick()
 
      }
 
@@ -136,9 +136,8 @@ class Site {
      }
 
      handleSaveBtnClick() {
-          const siteCard = document.querySelector(".site-card")
-          const allEntries = localStorage.getItem("visitorSaves")
-          debugger
+          // const siteCard = document.querySelector(".site-card")
+          // const allEntries = localStorage.getItem("visitorSaves")
           // allEntries.push(siteCard)
           // localStorage.setItem("visitorSaves", allEntries)
           // alert("Site data saved!")
