@@ -43,7 +43,7 @@ class Site {
                          const newSite = new Site()
                          setTimeout(() => {
                               newSite.buildDomElementsForSiteData(site)
-                              form.parentElement.style.height = "20vh"
+                              form.parentElement.style.height = "25vh"
                               this.siteDataCont.style.backgroundImage = "none"
                          
                               this.siteDataCont.firstElementChild.classList.add(
