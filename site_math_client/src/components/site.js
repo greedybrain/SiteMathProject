@@ -43,7 +43,7 @@ class Site {
                          const newSite = new Site()
                          setTimeout(() => {
                               newSite.buildDomElementsForSiteData(site)
-                              form.parentElement.style.height = "15vh"
+                              form.parentElement.style.height = "20vh"
                               this.siteDataCont.style.backgroundImage = "none"
                          
                               this.siteDataCont.firstElementChild.classList.add(
@@ -276,7 +276,14 @@ class Site {
                )
                siteVisitsList.appendChild(dataVisitsYearlyLi)
           }, 1700);
-          // setTimeout(ds
+          // setTimeout(() => {
+          //      saveBtn.classList.add(
+          //           "animate__animated",
+          //           "animate__zoomIn",
+          //           "animate__fast"
+          //      )
+          //      siteCard.append(saveBtn)
+          // }, 1600);
           
           this.siteDataCont.prepend(siteCard)
      }
