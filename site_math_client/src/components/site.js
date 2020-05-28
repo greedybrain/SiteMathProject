@@ -18,24 +18,27 @@ class Site {
           this.container = document.querySelector("div.container")
           this.dots = document.querySelectorAll('.dot')
           this.siteCards = document.querySelectorAll("div.site-card")
-          this.yesFavs = document.querySelector(".yes-favs")
-          this.noFavs = document.querySelector(".no-favs")
+
      }
 
-     static sitesArr = []
      static visitorSaves = []
 
-     static handleInitRender() {
+     handleInitRender() {
           const favAmt = document.querySelector("span.fav-amt")
-          if (localStorage.length !== 0) {
-               const saves = JSON.parse(localStorage.visitorSaves)
-               if (saves.length > 0) {
-                    new this().yesFavs.style.display = "inline-block"
+          const yesFavs = document.querySelector(".yes-favs")
+          const noFavs = document.querySelector(".no-favs")
+          if (localStorage.visitorSaves) {
+               if (JSON.parse(localStorage.visitorSaves).length > 0) {
+                    yesFavs.style.display = "block"
+                    noFavs.style.display = "none"
+                    favAmt.textContent = JSON.parse(localStorage.visitorSaves).length
                } else {
-                    new this().noFavs.style.display = "inline-block"
+                    yesFavs.style.display = "none"
+                    noFavs.style.display = "block"
+                    favAmt.textContent = JSON.parse(localStorage.visitorSaves).length
                }
           } else {
-               new this().noFavs.style.display = "inline-block"
+               yesFavs.style.display = "none"
           }
      }
 
@@ -56,19 +59,18 @@ class Site {
                           Array.from(cards).forEach(card => {
                                this.handleSiteCardRemoveAnimation(card)
                           })
-                         // push site data into array
-                         Site.sitesArr.push(site)
                          const newSite = new Site()
-                         newSite.buildDomElementsForSiteData(site)
-                         form.parentElement.style.height = "20vh"
-                         this.siteDataCont.style.backgroundImage = "none"
-                    
-                         this.siteDataCont.firstElementChild.classList.add(
-                              "animate__animated",
-                              "animate__backInUp",
-                              "animate__fast",
-                         )
-                         localStorage.setItem("sites", JSON.stringify(Site.sitesArr))
+                         setTimeout(() => {
+                              newSite.buildDomElementsForSiteData(site)
+                              form.parentElement.style.height = "20vh"
+                              this.siteDataCont.style.backgroundImage = "none"
+                         
+                              this.siteDataCont.firstElementChild.classList.add(
+                                   "animate__animated",
+                                   "animate__backInUp",
+                                   "animate__fast",
+                              )
+                         }, 1000);
                          form.reset()
                          this.handleSaveBtnClick(site)
                     })
@@ -133,18 +135,7 @@ class Site {
      }
 
      handleSaveBtnClick(site) {
-          setTimeout(() => {
-               const saveBtn = document.querySelector("button.save-btn")
-               saveBtn.addEventListener("click", () => {
-                    if (Site.visitorSaves.includes(site)) {
-                         alert("You already saved that site")
-                    } else {
-                         Site.visitorSaves.push(site)
-                         alert("Site data saved!")
-                    }
-                    localStorage.setItem("visitorSaves", JSON.stringify(Site.visitorSaves))
-               })
-          }, 3000);
+          //
      }
 
      buildDomElementsForSiteData(site) {

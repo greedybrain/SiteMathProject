@@ -45,10 +45,6 @@ header .favs img {
   width: 100%;
 }
 
-header .favs img {
-  display: none;
-}
-
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
