@@ -23,25 +23,6 @@ class Site {
 
      static visitorSaves = []
 
-     handleInitRender() {
-          const favAmt = document.querySelector("span.fav-amt")
-          const yesFavs = document.querySelector(".yes-favs")
-          const noFavs = document.querySelector(".no-favs")
-          if (localStorage.visitorSaves) {
-               if (JSON.parse(localStorage.visitorSaves).length > 0) {
-                    yesFavs.style.display = "block"
-                    noFavs.style.display = "none"
-                    favAmt.textContent = JSON.parse(localStorage.visitorSaves).length
-               } else {
-                    yesFavs.style.display = "none"
-                    noFavs.style.display = "block"
-                    favAmt.textContent = JSON.parse(localStorage.visitorSaves).length
-               }
-          } else {
-               yesFavs.style.display = "none"
-          }
-     }
-
      handleFormSubmit() {
           const form = document.querySelector("input[name=url_link]").parentElement.parentElement
           
