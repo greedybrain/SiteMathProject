@@ -38,7 +38,7 @@ class Site {
                           // clear site data container
                           const cards = this.siteDataCont.querySelectorAll("div.site-card")
                           Array.from(cards).forEach(card => {
-                               this.handleSiteCardRemoveAnimation(card)
+                              this.handleSiteCardRemoveAnimation(card)
                           })
                          const newSite = new Site()
                          setTimeout(() => {
